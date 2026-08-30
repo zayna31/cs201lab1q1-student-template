@@ -54,7 +54,10 @@ public class NumbersArray {
     public static Integer[] findUnique(Integer[] input) {
         HashSet<Integer> set = new HashSet<>();
         for (int num : input) {
-            if (!set.contains(num)) {
+            if (set.contains(num)) {
+                set.remove(num);
+            }
+            else {
                 set.add(num);
             }
         }
